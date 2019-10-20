@@ -1,11 +1,11 @@
-import React from 'react'
-import  { LoginStack, DiscoveryStack, PersonCenterStack } from './stackNavigation'
-import { createBottomTabNavigator } from 'react-navigation-tabs';
-import HomeIconWithBadge from 'components/HomeIconWithBadge'
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import React from 'react';
+import {LoginStack, DiscoveryStack, PersonCenterStack} from './stackNavigation';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
+import HomeIconWithBadge from 'components/HomeIconWithBadge';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const getTabBarIcon = (navigation, focused, tintColor) => {
-  const { routeName } = navigation.state;
+  const {routeName} = navigation.state;
   let IconComponent = Ionicons;
   let iconName;
   if (routeName === 'Home') {
@@ -16,16 +16,18 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   }
 
   return <IconComponent name={iconName} size={25} color={tintColor} />;
-}
+};
 
-
-export default createBottomTabNavigator({LoginStack, DiscoveryStack, PersonCenterStack},{
-    defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, tintColor }) =>
-         getTabBarIcon(navigation, focused, tintColor)
+export default createBottomTabNavigator(
+  {LoginStack, DiscoveryStack, PersonCenterStack},
+  {
+    defaultNavigationOptions: ({navigation}) => ({
+      tabBarIcon: ({focused, tintColor}) =>
+        getTabBarIcon(navigation, focused, tintColor),
     }),
     tabBarOptions: {
-        activeTintColor: 'tomato',
-        inactiveTintColor: 'gray',
+      activeTintColor: 'tomato',
+      inactiveTintColor: 'gray',
     },
-});
+  },
+);
