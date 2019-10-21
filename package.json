@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "build:iconfont": "iconfonttojson ./src/assets/font/iconfont.css"
+    "build:iconfont": "iconfonttojson ./src/assets/font/Iconfont.css"
   },
   "dependencies": {
     "react": "16.9.0",
