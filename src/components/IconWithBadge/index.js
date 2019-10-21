@@ -1,5 +1,5 @@
 import React from 'react'
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import { IconFont } from '#/font'
 import { View, Text } from 'react-native'
 
 class IconWithBadge extends React.Component {
@@ -7,7 +7,7 @@ class IconWithBadge extends React.Component {
     const { name, badgeCount, color, size } = this.props;
     return (
       <View style={{ width: 24, height: 24, margin: 5 }}>
-        <Ionicons name={name} size={size} color={color} />
+        <IconFont name={name} size={size} color={color} />
         {badgeCount > 0 && (
           <View
             style={{

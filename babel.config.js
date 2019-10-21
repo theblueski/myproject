@@ -12,6 +12,11 @@ module.exports = {
                 "root": __dirname,
                 "rootPathSuffix": "./src",
                 "rootPathPrefix": "@/"
+            },
+            {
+                "root": __dirname,
+                "rootPathSuffix": "./src/assets",
+                "rootPathPrefix": "#/"
             }
         ]
     }]
